@@ -3,25 +3,32 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour {
 
-    public float speed;
-    private Rigidbody2D rBody;
-    private Vector3 m_Velocity = Vector3.zero;
-    [Range(0, .3f)][SerializeField]private float m_MovementSmoothing = .05f;
+    public MovementController controller;
+
+    private float moveX = 0f;
+    private float runSpeed = 40f;
+    private bool jump = false;
+    private bool crouch = false;            
 
 
-
-
-    // Use this for initialization
-    void Start () {
-        rBody = GetComponent<Rigidbody2D>();
-	}
-	
-    void FixedUpdate()
+    void Update ()
     {
-        // Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(speed* 10f, rBody.velocity.y);
-			// And then smoothing it out and applying it to the character
-			rBody.velocity = Vector3.SmoothDamp(rBody.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-        
+        moveX = Input.GetAxis("Horizontal") * runSpeed;        //Press A-Key = -1, Press D-Key = 1
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
+        }
+        if (Input.GetButtonDown("Crouch"))
+        {
+            crouch = true;
+        } else if (Input.GetButtonUp("Crouch")) {
+            crouch = false;
+        }
+    }
+    void FixedUpdate ()
+    {
+        controller.Move(moveX * Time.fixedDeltaTime, false, jump);
+        jump = false;
+        crouch = false;
     }
 }

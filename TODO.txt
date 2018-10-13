@@ -1,0 +1,2 @@
+Crouching - S verkleinert Character, W vergrößert
+Movement Controller - crouching entfernen
