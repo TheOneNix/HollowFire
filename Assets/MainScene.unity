@@ -167,6 +167,18 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61040963728714144, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
     - {fileID: 114741624140794210, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
@@ -188,9 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f4bf75f2885264aa9598f6e6c848ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
@@ -203,11 +212,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: MovementController+BoolEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &789730494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +313,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1091754147987100, guid: c9e717b44267d7749b25a59a86bf3904, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9e717b44267d7749b25a59a86bf3904, type: 2}

@@ -1,2 +1,22 @@
+Low:
+
+Hintergrund - Neues Bild, Wald oder Höhle
+Character - Neue Textur, kleine Flamme
+Brick - Neue Textur
+
+
+Medium:
+
 Crouching - S verkleinert Character, W vergrößert
 Movement Controller - crouching entfernen
+Mehr Objecte - Kisten, Tunnel zum crouching
+Character flip - Character kann in eine Richtung blicken (siehe MovementCtrl)
+
+
+
+High:
+
+Umgebung erleuchten - Umgebung wird zum Character (Feuer) hin heller
+Map erweitern - Map wird vergrößert, Kamera bewegt sich mit
+Schießen - kleine Feuerbälle schießen
+Kisten zerstören - bei Berührung / Schuss

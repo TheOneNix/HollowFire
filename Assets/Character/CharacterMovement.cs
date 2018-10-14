@@ -8,8 +8,7 @@ public class CharacterMovement : MonoBehaviour {
     private float moveX = 0f;
     private float runSpeed = 40f;
     private bool jump = false;
-    private bool crouch = false;            
-
+    private bool resize = false;
 
     void Update ()
     {
@@ -20,15 +19,14 @@ public class CharacterMovement : MonoBehaviour {
         }
         if (Input.GetButtonDown("Crouch"))
         {
-            crouch = true;
-        } else if (Input.GetButtonUp("Crouch")) {
-            crouch = false;
+            resize = true;
         }
     }
     void FixedUpdate ()
     {
-        controller.Move(moveX * Time.fixedDeltaTime, false, jump);
+        controller.Move(moveX * Time.fixedDeltaTime, jump);
         jump = false;
-        crouch = false;
+        controller.Resize(resize, Time.fixedDeltaTime);
+        resize = false;
     }
 }
