@@ -122,11 +122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.4
+      value: -7.645
       objectReference: {fileID: 0}
     - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.1
+      value: 0.233
       objectReference: {fileID: 0}
     - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -152,36 +152,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 50230931360982274, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
+    - target: {fileID: 212353514146884862, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
         type: 2}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 50230931360982274, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cbaec653786a9204380c7d8cdc053d1e,
+        type: 3}
+    - target: {fileID: 58298572152085568, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
         type: 2}
-      propertyPath: m_Constraints
-      value: 4
+      propertyPath: m_Radius
+      value: 0.9965435
       objectReference: {fileID: 0}
-    - target: {fileID: 50230931360982274, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
-        type: 2}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 61040963728714144, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
-    - {fileID: 114741624140794210, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &789730492 stripped
@@ -189,90 +171,31 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1189473934125176, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
     type: 2}
   m_PrefabInternal: {fileID: 227385739}
---- !u!114 &789730493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 789730492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97f4bf75f2885264aa9598f6e6c848ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_GroundCheck: {fileID: 809638218}
-  m_CeilingCheck: {fileID: 1409468957}
-  m_CrouchDisableCollider: {fileID: 0}
-  m_minShrinking: 0.6
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &789730494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 789730492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fbe3c3f81c09fa4aa32e3da2b7665c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 789730493}
---- !u!58 &789730495
-CircleCollider2D:
+--- !u!61 &789730493
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789730492}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c0d4a3849edd64d46b2456226b50a3d6, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.061282158, y: 0.0034046173}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 0.65, y: 0.65}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.325
---- !u!4 &789730498 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
-    type: 2}
-  m_PrefabInternal: {fileID: 227385739}
---- !u!1 &809638217
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 809638218}
-  m_Layer: 0
-  m_Name: GroundCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &809638218
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 809638217}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.024, y: -0.323, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 789730498}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.6186914, y: 1.9931908}
+  m_EdgeRadius: 0
 --- !u!1 &924174264
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,34 +239,6 @@ Transform:
   - {fileID: 1929104629}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1409468956
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1409468957}
-  m_Layer: 0
-  m_Name: CeilingCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1409468957
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1409468956}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: 0.326, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 789730498}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1783042086
 Prefab:
@@ -1557,6 +1452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2146528967}
   - component: {fileID: 2146528966}
+  - component: {fileID: 2146528968}
   m_Layer: 0
   m_Name: NewBackground1920x1080
   m_TagString: Untagged
@@ -1623,3 +1519,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2146528968
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146528965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2427251047ce0434b9015caaff64db6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
