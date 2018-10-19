@@ -171,9 +171,8 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_GroundCheck: {fileID: 4720106044686874}
-  m_CeilingCheck: {fileID: 4404862958762732}
-  m_CrouchDisableCollider: {fileID: 0}
+  m_GroundCheck: {fileID: 0}
+  m_CeilingCheck: {fileID: 0}
   m_minShrinking: 0.6
   OnLandEvent:
     m_PersistentCalls:
@@ -235,6 +234,6 @@ SpriteRenderer:
   m_Size: {x: 0.65, y: 0.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

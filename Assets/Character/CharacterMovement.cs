@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour {
     public MovementController controller;
 
     private float moveX = 0f;
-    private float runSpeed = 40f;
+    private float runSpeed = 70f;
     private bool jump = false;
     private bool resize = false;
 
