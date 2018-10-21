@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MovementController : MonoBehaviour {
 
-    private float m_JumpForce = 800f;                           // Amount of force added when the player jumps.
+    private float m_JumpForce = 1000f;                           // Amount of force added when the player jumps.
     private float m_MovementSmoothing = .01f;                   // How much to smooth out the movement
     [SerializeField] private bool m_AirControl = false;                          // Whether or not a player can steer while jumping;
     [SerializeField] private LayerMask m_WhatIsGround;                           // A mask determining what is ground to the character
@@ -15,7 +15,8 @@ public class MovementController : MonoBehaviour {
 
     const float k_GroundedRadius = .2f;                         // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;                                    // Whether or not the player is grounded.
-    const float k_CeilingRadius = .2f;                          // Radius of the overlap circle to determine if the player can stand up
+    //const float k_CeilingRadius = .2f;                        
+    private Vector2 m_Size = new Vector2(1.611345f, 1.867575f);
     private Rigidbody2D m_Rigidbody2D;
     private Vector3 m_Velocity = Vector3.zero;
     private int sizeState = 0;                                // 0 = Normal Size, 1 = Small Size, 2 = is Shrinking, 3 = is growing
@@ -67,6 +68,12 @@ public class MovementController : MonoBehaviour {
     }
     public void Resize (bool resize, float time)
     {
+        // While being small, check if the character can grow
+        if (sizeState == 1)
+        {
+            if (Physics2D.OverlapBox(m_CeilingCheck.position, m_Size, m_WhatIsGround))
+                resize = false;
+        }
         if (resize || sizeState == 2 || sizeState == 3)
         {
             Vector3 theScale = transform.localScale;
@@ -79,16 +86,16 @@ public class MovementController : MonoBehaviour {
 
             if(sizeState == 2)
             {
-                theScale.x = theScale.x - (m_minShrinking * 0.5f * time);
-                theScale.y = theScale.y - (m_minShrinking * 0.5f * time);
+                theScale.x = theScale.x - (m_minShrinking  * time);
+                theScale.y = theScale.y - (m_minShrinking  * time);
                 transform.localScale = theScale;
                 if (theScale.x <= m_minShrinking)
                     sizeState = 1;
 
             } else if (sizeState == 3)
             {
-                theScale.x = theScale.x + (m_minShrinking * 0.5f * time);
-                theScale.y = theScale.y + (m_minShrinking * 0.5f * time);
+                theScale.x = theScale.x + (m_minShrinking  * time);
+                theScale.y = theScale.y + (m_minShrinking  * time);
                 transform.localScale = theScale;
                 if (theScale.x >= 1)
                     sizeState = 0;
@@ -96,12 +103,6 @@ public class MovementController : MonoBehaviour {
 
             
         }
-        // While being small, check if the character can grow
-        /*
-        if (!resize)
-        {
-            if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-                resize = true;
-        }*/
+
     }
 }
