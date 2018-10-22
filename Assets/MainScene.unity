@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114602855947201288, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
+        type: 2}
+      propertyPath: groundPoint
+      value: 
+      objectReference: {fileID: 1721326904}
+    - target: {fileID: 114602855947201288, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
+        type: 2}
+      propertyPath: whatIsGround.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
   m_IsPrefabAsset: 0
@@ -166,6 +176,8 @@ GameObject:
   - component: {fileID: 146044999}
   - component: {fileID: 146044998}
   - component: {fileID: 146044997}
+  - component: {fileID: 146045001}
+  - component: {fileID: 146045000}
   m_Layer: 0
   m_Name: TilemapGround
   m_TagString: Untagged
@@ -758,6 +770,56 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &146045000
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146044995}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 71.85063, y: 7.9136934}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.76940155, y: 22.103296}
+  m_EdgeRadius: 0
+--- !u!61 &146045001
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146044995}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -23.037176, y: 7.937662}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.074955, y: 22.11124}
+  m_EdgeRadius: 0
 --- !u!4 &227385740 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
@@ -1953,6 +2015,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1721326904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4486153415184306, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
+    type: 2}
+  m_PrefabInternal: {fileID: 29482084}
 --- !u!1001 &1783042086
 Prefab:
   m_ObjectHideFlags: 0
