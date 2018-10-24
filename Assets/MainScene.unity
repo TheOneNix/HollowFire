@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4206195877588398, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114602855947201288, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
         type: 2}
@@ -865,7 +865,7 @@ Transform:
   - {fileID: 949026214}
   - {fileID: 146044996}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472973870
 GameObject:
@@ -879,6 +879,8 @@ GameObject:
   - component: {fileID: 472973873}
   - component: {fileID: 472973872}
   - component: {fileID: 472973871}
+  - component: {fileID: 472973877}
+  - component: {fileID: 472973876}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -989,12 +991,44 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 472973870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.56981, y: -1.0413532, z: 0}
+  m_LocalPosition: {x: 12.95, y: -0.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1584044372}
+  - {fileID: 884266203}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &472973876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 472973870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f4bf75f2885264aa9598f6e6c848ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundPoint: {fileID: 1584044372}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CeilingCheck: {fileID: 884266203}
+  m_minShrinking: 0.6
+  gravity: 2
+--- !u!114 &472973877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 472973870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c6adf28ef23e14c926b7ec0777f595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 472973876}
 --- !u!1 &644083137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1102,35 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &884266202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 884266203}
+  m_Layer: 0
+  m_Name: TopCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &884266203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 884266202}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.644, z: 0}
+  m_LocalScale: {x: 1.0163, y: 1.0163, z: 1.0163}
+  m_Children: []
+  m_Father: {fileID: 472973875}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &949026213
 GameObject:
@@ -2143,6 +2205,34 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1584044371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584044372}
+  m_Layer: 0
+  m_Name: BotCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1584044372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1584044371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0212, y: -0.6391, z: 0}
+  m_LocalScale: {x: 1.0163, y: 1.0163, z: 1.0163}
+  m_Children: []
+  m_Father: {fileID: 472973875}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1721326904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4486153415184306, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,

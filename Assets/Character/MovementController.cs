@@ -44,7 +44,7 @@ public class MovementController : MonoBehaviour {
             
     }
 
-    private bool isOnGround()
+    public bool isOnGround()
     {
         if(rigbody2D.velocity.y <=0)
         {
