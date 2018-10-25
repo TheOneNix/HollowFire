@@ -48,7 +48,7 @@ public class MovementController : MonoBehaviour {
     {
         if(rigbody2D.velocity.y <=0)
         {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(groundPoint.position, groundRadius, whatIsGround);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(groundPoint.position, groundRadius, whatIsGround);          //effizienter: colliders.length > 1
             for(int i = 0; i < colliders.Length; i++)
             {
                 if( colliders[i].gameObject != gameObject)          //check if colliders game Object is different from the player
@@ -61,13 +61,14 @@ public class MovementController : MonoBehaviour {
     }
 
     public void Resize (bool resize, float time)
-    {   /*      TODO
+    {
         if (sizeState == 1)                         // While being small, check if the character can grow
         {
-            if (Physics2D.OverlapBox(m_CeilingCheck.position, m_Size, whatIsGround))
+            if (Physics2D.OverlapCircleAll(m_CeilingCheck.position, 0.5f, whatIsGround).Length > 1) {
                 resize = false;
+            }
         }
-        */
+        
         if (resize || sizeState == 2 || sizeState == 3)
         {
             Vector3 theScale = transform.localScale;
