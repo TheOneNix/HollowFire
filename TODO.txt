@@ -1,19 +1,24 @@
 Low:
 
-Hintergrund - Neues Bild, Wald oder Höhle
-Brick - Neue Textur
-
+Mehr Objekte - Kisten zum stoÃŸen, Tunnel fÃ¼r lowSize
+Neue Textur fÃ¼r Gegner
 
 Medium:
 
-Mehr Objecte - Kisten, Tunnel zum crouching
-Character flip - Character kann in eine Richtung blicken (siehe MovementCtrl)
-
+Spieler erleidet Schaden wenn er vom Gegner berÃ¼hrt wird
+Spieler kann FeuerbÃ¤lle schieÃŸen
+Mehrere Gegner
+Kisten kÃ¶nnen zerstÃ¶rt werden
+Pause MenÃ¼
 
 High:
 
-Umgebung erleuchten - Umgebung wird zum Character (Feuer) hin heller
-Map erweitern - Map wird vergrößert, Kamera bewegt sich mit
-Schießen - kleine Feuerbälle schießen
-Kisten zerstören - bei Berührung / Schuss
-Fire Snake (Super Mario)
+
+Gegner spawnen Random, fallen vom Himmel
+Gegner AI: verfolgen Spieler
+Gegner AI: mÃ¼ssen erst den Spieler entdecken
+Lebensleiste
+Gegner kÃ¶nnen sterben / werden entfernt
+Gegner explodieren bei Tod
+Character erleuchtet die Umgebung um sich herum
+FeuerbÃ¤lle kÃ¶nnen auch Licht spenden
