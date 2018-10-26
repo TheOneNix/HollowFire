@@ -162,6 +162,16 @@ Prefab:
       propertyPath: whatIsGround.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 50230931360982274, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
+        type: 2}
+      propertyPath: m_Mass
+      value: 3.0093088
+      objectReference: {fileID: 0}
+    - target: {fileID: 50230931360982274, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
   m_IsPrefabAsset: 0
@@ -898,7 +908,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 2.2766776
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -1017,6 +1027,7 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 884266203}
   m_minShrinking: 0.6
   gravity: 2
+  fallMultiplier: 2
 --- !u!114 &472973877
 MonoBehaviour:
   m_ObjectHideFlags: 0

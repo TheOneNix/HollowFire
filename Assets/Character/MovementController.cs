@@ -11,9 +11,10 @@ public class MovementController : MonoBehaviour {
     [SerializeField] private LayerMask whatIsGround;                           // A mask determining what is ground to the character
     [SerializeField] private Transform m_CeilingCheck;                           // A position marking where to check for ceilings
     [SerializeField] private float m_minShrinking = 0.6f;
-    [SerializeField] private float gravity = 2.0f;
+    [SerializeField] private float gravity = 1.0f;
+    public float fallMultiplier = 2f;
     private bool onGround;
-    private float groundRadius = 0.2f;
+    private float groundRadius = 0.5f;
     private Rigidbody2D rigbody2D;
     private Vector3 velocity = Vector3.zero;
     private int sizeState = 0;                                // 0 = Normal Size, 1 = Small Size, 2 = is Shrinking, 3 = is growing
@@ -25,13 +26,16 @@ public class MovementController : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        rigbody2D.AddForce(Physics.gravity * (gravity * rigbody2D.mass * rigbody2D.mass));
-    }
+        rigbody2D.AddForce(Physics.gravity * gravity);
 
+        if (rigbody2D.velocity.y < 0)
+        {
+            rigbody2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+
+    }
     public void Move(float move, bool jumpKeyPressed)
     {   
-        
-        
         if (jumpKeyPressed && isOnGround())
         {
             rigbody2D.AddForce(new Vector2(rigbody2D.velocity.x, m_JumpForce));
@@ -39,9 +43,7 @@ public class MovementController : MonoBehaviour {
         
         // Move the character by finding the target velocity
         Vector3 targetVelocity = new Vector2(move * 10f, rigbody2D.velocity.y);
-        // And then smoothing it out and applying it to the character
         rigbody2D.velocity = Vector3.SmoothDamp(rigbody2D.velocity, targetVelocity, ref velocity, m_MovementSmoothing);
-            
     }
 
     public bool isOnGround()
