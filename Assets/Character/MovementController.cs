@@ -12,6 +12,7 @@ public class MovementController : MonoBehaviour {
     [SerializeField] private Transform m_CeilingCheck;                           // A position marking where to check for ceilings
     [SerializeField] private float m_minShrinking = 0.6f;
     [SerializeField] private float gravity = 1.0f;
+    private bool facingRight = true;
     public float fallMultiplier = 2f;
     private bool onGround;
     private float groundRadius = 0.5f;
@@ -44,6 +45,17 @@ public class MovementController : MonoBehaviour {
         // Move the character by finding the target velocity
         Vector3 targetVelocity = new Vector2(move * 10f, rigbody2D.velocity.y);
         rigbody2D.velocity = Vector3.SmoothDamp(rigbody2D.velocity, targetVelocity, ref velocity, m_MovementSmoothing);
+
+        if (move > 0 && !facingRight)
+        {
+            facingRight = true;
+            turnAround();
+        }else if (move < 0 && facingRight)
+        {
+            facingRight = false;
+            turnAround();
+        }
+
     }
 
     public bool isOnGround()
@@ -61,7 +73,10 @@ public class MovementController : MonoBehaviour {
         }
         return false;
     }
-
+    private void turnAround()
+    {
+        transform.Rotate(0, 180f, 0);
+    }
     public void Resize (bool resize, float time)
     {
         if (sizeState == 1)                         // While being small, check if the character can grow
