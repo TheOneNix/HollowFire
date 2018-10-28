@@ -1,15 +1,16 @@
 Low:
 
-Mehr Objekte - Kisten zum stoßen, Tunnel für lowSize
 Neue Textur für Gegner
 
 Medium:
 
 Spieler erleidet Schaden wenn er vom Gegner berührt wird
-Spieler kann Feuerbälle schießen
 Mehrere Gegner
 Kisten können zerstört werden
 Pause Menü
+Feuerball hat Cooldown
+Animation für Gegner-Tod
+Animation für Feuerball gegen Wand
 
 High:
 
@@ -18,7 +19,5 @@ Gegner spawnen Random, fallen vom Himmel
 Gegner AI: verfolgen Spieler
 Gegner AI: müssen erst den Spieler entdecken
 Lebensleiste
-Gegner können sterben / werden entfernt
-Gegner explodieren bei Tod
 Character erleuchtet die Umgebung um sich herum
 Feuerbälle können auch Licht spenden
