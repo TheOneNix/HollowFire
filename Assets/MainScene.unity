@@ -200,6 +200,11 @@ Prefab:
       propertyPath: m_UseAutoMass
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 61415680789032836, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4adbb8f9daf8a643b9d19d7f7f40aaf, type: 2}
   m_IsPrefabAsset: 0
@@ -4417,6 +4422,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 53216014}
   bullet: {fileID: 1191767188677904, guid: 3e1b16123828c9540a975b450a3aab3f, type: 2}
+--- !u!114 &1433019477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433019469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c9f514acc564104d8e9eaa37486774c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1556646151
 GameObject:
   m_ObjectHideFlags: 0
