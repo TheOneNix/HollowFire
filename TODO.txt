@@ -1,21 +1,5 @@
-﻿Low:
-
-Bug: Fuerball funktioniert nicht wenn man klein ist
-
-Medium:
-
-Spieler erleidet Schaden wenn er vom Gegner berührt wird
-Kisten können zerstört werden
-Pause Menü
+﻿Pause Menü
 Feuerball hat Cooldown
-Animation für Gegner-Tod
-Animation für Feuerball gegen Wand
-
-High:
-
-Gegner spawnen Random, fallen vom Himmel
 Gegner AI: verfolgen Spieler
 Gegner AI: müssen erst den Spieler entdecken
 Lebensleiste
-Character erleuchtet die Umgebung um sich herum
-Feuerbälle können auch Licht spenden
