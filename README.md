@@ -20,4 +20,4 @@ Future feature I want to work on:
 
 Nothing impressive to see here :)
 
-gif
+![Alt Text](https://github.com/TheOneNix/HollowFire/blob/master/gameplay.gif)
