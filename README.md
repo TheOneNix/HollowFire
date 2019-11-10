@@ -10,8 +10,7 @@ Some basic features implemented:
 *	Enemy's and the character can die
 *	Main Character can change his size, to overcome obstacles
 
-Current state is on hold, but features will be added from February on.
-Future feature I want to work on:
+Future feature I may work on:
 
 *	Sound
 *	Simple User-Interface
